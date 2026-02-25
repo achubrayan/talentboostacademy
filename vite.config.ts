@@ -179,6 +179,9 @@ export default defineConfig({
       ".manusvm.computer",
       "localhost",
       "127.0.0.1",
+      "talentboostacademyglobal.com",
+      "www.talentboostacademyglobal.com",
+      ".onrender.com"
     ],
     fs: {
       strict: true,
