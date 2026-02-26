@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "blog": "Blog",
+    "case_studies": "Études de Cas",
+    "partnerships": "Partenariats",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book_consultation": "Réserver une Consultation"
+  }
+}
