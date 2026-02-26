@@ -1,18 +1,28 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import Backend from 'i18next-http-backend';
+
+// Direct imports ensure the data is bundled and available immediately
+import enLabels from './en.json';
+import frLabels from './fr.json';
 
 i18n
-  .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
-    interpolation: { escapeValue: false },
-    backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
+    resources: {
+      en: { translation: enLabels },
+      fr: { translation: frLabels }
     },
+    fallbackLng: 'en',
+    supportedLngs: ['en', 'fr'],
+    interpolation: {
+      escapeValue: false // React already escapes values to prevent XSS
+    },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage']
+    }
   });
 
 export default i18n;
