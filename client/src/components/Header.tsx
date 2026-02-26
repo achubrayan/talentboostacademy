@@ -11,25 +11,28 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next"; // Integrated: Translation hook
 
 const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332618297/XNLxhXfaMTqzarog.png";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/blog", label: "Blog" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/partnerships", label: "Partnerships" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
-];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { t } = useTranslation(); // Integrated: Translation function
+
+  // Navigation links are now dynamic based on the active language
+  const navLinks = [
+    { href: "/", label: t("nav.home") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/services", label: t("nav.services") },
+    { href: "/blog", label: t("nav.blog") },
+    { href: "/case-studies", label: t("nav.case_studies") },
+    { href: "/partnerships", label: t("nav.partnerships") },
+    { href: "/testimonials", label: t("nav.testimonials") },
+    { href: "/faq", label: t("nav.faq") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +91,7 @@ export default function Header() {
             <Button
               className="bg-primary hover:bg-primary/90 text-white font-medium px-6"
             >
-              Book a Consultation
+              {t("nav.book_consultation")}
             </Button>
           </Link>
         </div>
@@ -127,10 +130,12 @@ export default function Header() {
                   </span>
                 </Link>
               ))}
-              <LanguageSwitcher />
+              <div className="flex items-center py-2 border-t border-border mt-2">
+                <LanguageSwitcher />
+              </div>
               <Link href="/contact">
                 <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-white">
-                  Book a Consultation
+                  {t("nav.book_consultation")}
                 </Button>
               </Link>
             </nav>
