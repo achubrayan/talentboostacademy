@@ -26,100 +26,101 @@ const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/
 const BIA_LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332618297/uFPpThlOAvUJRocD.PNG";
 const FLOWMINGO_LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332618297/STYllyTZYhkRsbEm.ICO";
 
-const partners = [
-  {
-    id: "bia",
-    name: "Bradford International Alliance",
-    shortName: "BIA",
-    type: "Academic Partner",
-    logo: "BIA",
-    logoImage: BIA_LOGO_URL,
-    url: "https://bradfordia.org/",
-    description: "Bradford International Alliance is our strategic academic partner, enabling us to deliver world-class online degree and academic programs to professionals worldwide.",
-    partnership: "Through our partnership with BIA, we offer internationally recognized undergraduate and postgraduate programs designed for working professionals seeking to advance their careers through flexible, accessible education.",
-    offerings: [
-      "Online undergraduate degree programs",
-      "Postgraduate and master's programs",
-      "International academic pathways",
-      "Flexible learning for working professionals",
-    ],
-    icon: GraduationCap,
-    color: "primary",
-  },
-  {
-    id: "flowmingo",
-    name: "Flowmingo AI",
-    shortName: "Flowmingo",
-    type: "HR Technology Partner",
-    logo: "F",
-    logoImage: FLOWMINGO_LOGO_URL,
-    url: "https://flowmingo.ai/",
-    description: "Flowmingo AI powers our cutting-edge HR technology and AI solutions, bringing intelligent automation and advanced recruitment capabilities to our clients.",
-    partnership: "Our partnership with Flowmingo AI enables us to offer state-of-the-art AI-powered recruitment tools, candidate screening solutions, and digital HR transformation services that help organizations hire smarter and faster.",
-    offerings: [
-      "AI-powered recruitment tools",
-      "Intelligent candidate screening & matching",
-      "HR automation solutions",
-      "Talent intelligence platforms",
-    ],
-    icon: Cpu,
-    color: "gold",
-  },
-];
-
-const partnershipValues = [
-  {
-    icon: Handshake,
-    title: "Strategic Collaboration",
-    description: "We carefully select partners who share our commitment to excellence and innovation.",
-  },
-  {
-    icon: Globe,
-    title: "Global Reach",
-    description: "Our partnerships extend our capabilities to serve clients across industries and geographies.",
-  },
-  {
-    icon: Shield,
-    title: "Quality Assurance",
-    description: "Every partnership is built on rigorous standards and mutual accountability.",
-  },
-  {
-    icon: Award,
-    title: "Shared Excellence",
-    description: "Together, we deliver solutions that exceed expectations and drive real results.",
-  },
-];
-
-const comparisonData = [
-  {
-    feature: "Core Expertise",
-    bia: "Academic programs & professional development",
-    flowmingo: "AI-powered recruitment & HR automation"
-  },
-  {
-    feature: "Primary Focus",
-    bia: "Talent education & skill development",
-    flowmingo: "Talent acquisition & retention"
-  },
-  {
-    feature: "Key Offerings",
-    bia: "Degree programs, certifications, online courses",
-    flowmingo: "Recruitment tools, candidate screening, analytics"
-  },
-  {
-    feature: "Client Benefit",
-    bia: "Build internal talent pipeline through education",
-    flowmingo: "Optimize hiring & reduce turnover with AI"
-  },
-  {
-    feature: "Global Reach",
-    bia: "International academic pathways & recognition",
-    flowmingo: "Multi-language support & global deployment"
-  },
-];
-
 export default function Partnerships() {
   const { t } = useTranslation();
+
+  const partners = [
+    {
+      id: "bia",
+      name: "Bradford International Alliance",
+      shortName: "BIA",
+      type: "Academic Partner",
+      logo: "BIA",
+      logoImage: BIA_LOGO_URL,
+      url: "https://bradfordia.org/",
+      description: "Bradford International Alliance is our strategic academic partner, enabling us to deliver world-class online degree and academic programs to professionals worldwide.",
+      partnership: "Through our partnership with BIA, we offer internationally recognized undergraduate and postgraduate programs designed for working professionals seeking to advance their careers through flexible, accessible education.",
+      offerings: [
+        "Online undergraduate degree programs",
+        "Postgraduate and master's programs",
+        "International academic pathways",
+        "Flexible learning for working professionals",
+      ],
+      icon: GraduationCap,
+      color: "primary",
+    },
+    {
+      id: "flowmingo",
+      name: "Flowmingo AI",
+      shortName: "Flowmingo",
+      type: "HR Technology Partner",
+      logo: "F",
+      logoImage: FLOWMINGO_LOGO_URL,
+      url: "https://rebrand.ly/6b9b3hy", // UPDATED: Your Referral Link
+      description: "Flowmingo AI powers our cutting-edge HR technology and AI solutions, bringing intelligent automation and advanced recruitment capabilities to our clients.",
+      partnership: "Our partnership with Flowmingo AI enables us to offer state-of-the-art AI-powered recruitment tools, candidate screening solutions, and digital HR transformation services that help organizations hire smarter and faster.",
+      offerings: [
+        "AI-powered recruitment tools",
+        "Intelligent candidate screening & matching",
+        "HR automation solutions",
+        "Talent intelligence platforms",
+      ],
+      icon: Cpu,
+      color: "gold",
+    },
+  ];
+
+  const partnershipValues = [
+    {
+      icon: Handshake,
+      title: "Strategic Collaboration",
+      description: "We carefully select partners who share our commitment to excellence and innovation.",
+    },
+    {
+      icon: Globe,
+      title: "Global Reach",
+      description: "Our partnerships extend our capabilities to serve clients across industries and geographies.",
+    },
+    {
+      icon: Shield,
+      title: "Quality Assurance",
+      description: "Every partnership is built on rigorous standards and mutual accountability.",
+    },
+    {
+      icon: Award,
+      title: "Shared Excellence",
+      description: "Together, we deliver solutions that exceed expectations and drive real results.",
+    },
+  ];
+
+  const comparisonData = [
+    {
+      feature: "Core Expertise",
+      bia: "Academic programs & professional development",
+      flowmingo: "AI-powered recruitment & HR automation"
+    },
+    {
+      feature: "Primary Focus",
+      bia: "Talent education & skill development",
+      flowmingo: "Talent acquisition & retention"
+    },
+    {
+      feature: "Key Offerings",
+      bia: "Degree programs, certifications, online courses",
+      flowmingo: "Recruitment tools, candidate screening, analytics"
+    },
+    {
+      feature: "Client Benefit",
+      bia: "Build internal talent pipeline through education",
+      flowmingo: "Optimize hiring & reduce turnover with AI"
+    },
+    {
+      feature: "Global Reach",
+      bia: "International academic pathways & recognition",
+      flowmingo: "Multi-language support & global deployment"
+    },
+  ];
+
   useSEO({
     title: "Strategic Partnerships | Talent Boost Academy",
     description: "Discover our strategic partnerships with Bradford International Alliance and Flowmingo AI. Together, we deliver comprehensive talent, education, and HR technology solutions.",
@@ -148,16 +149,11 @@ export default function Partnerships() {
             className="max-w-3xl"
           >
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6">
-              Our Partners
+              {t("partnerships.label")}
             </span>
-            <h1 className="text-white mb-6">
-              Strategic Partnerships &{" "}
-              <span className="text-gold">Global Alliances</span>
-            </h1>
+            <h1 className="text-white mb-6" dangerouslySetInnerHTML={{ __html: t("partnerships.title") }} />
             <p className="text-xl text-white/80 leading-relaxed">
-              We collaborate with leading institutions and technology partners to 
-              deliver world-class solutions that drive transformation and create 
-              lasting value for our clients.
+              {t("partnerships.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -308,184 +304,3 @@ export default function Partnerships() {
 
                     <div className="mt-6 pt-6 border-t border-border/50">
                       <Link href="/services">
-                        <Button 
-                          variant="outline" 
-                          className="w-full"
-                        >
-                          View Related Services
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partner Success Metrics */}
-      <PartnerMetricsDashboard />
-
-      {/* Partner Comparison Table */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <span className="label-editorial mb-4 block">Partnership Synergy</span>
-            <h2 className="mb-6">
-              How Our Partners <span className="text-primary">Complement Each Other</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl">
-              Our partnerships create a powerful ecosystem where academic excellence meets cutting-edge technology, delivering comprehensive solutions for organizational transformation.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-sm overflow-hidden"
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-border bg-secondary/30">
-                    <th className="px-6 py-4 text-left font-serif font-semibold text-foreground">Feature</th>
-                    <th className="px-6 py-4 text-left font-serif font-semibold text-primary">Bradford International Alliance</th>
-                    <th className="px-6 py-4 text-left font-serif font-semibold text-gold">Flowmingo AI</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonData.map((row, index) => (
-                    <tr key={index} className="border-b border-border hover:bg-secondary/5 transition-colors">
-                      <td className="px-6 py-4 font-medium text-foreground">{row.feature}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.bia}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.flowmingo}</td>
-                    </tr>
-                  ))}
-                  <tr className="hover:bg-secondary/5 transition-colors bg-secondary/10">
-                    <td className="px-6 py-4 font-semibold text-foreground">Combined Value</td>
-                    <td colSpan={2} className="px-6 py-4 text-primary font-semibold">
-                      Comprehensive talent ecosystem: Develop, Hire, Retain, and Advance
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Partnership Inquiry */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-purple rounded-2xl p-8 md:p-12 text-white text-center"
-            >
-              <Handshake className="w-16 h-16 text-gold mx-auto mb-6" />
-              <h2 className="text-white mb-4">
-                Interested in Partnering with Us?
-              </h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                We're always looking for strategic partners who share our vision of 
-                empowering organizations and developing talent. Let's explore how we 
-                can create value together.
-              </p>
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  className="bg-[#D4AF37] hover:bg-[#C9A227] text-[#1E1E28] font-semibold px-8 shadow-lg"
-                >
-                  Start a Conversation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Disclosure */}
-      <section className="py-12 bg-gray-50 border-t border-b border-gray-200">
-        <div className="container max-w-4xl">
-          <div className="bg-white rounded-lg p-6 md:p-8 border border-gray-200">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                <span className="text-blue-600 font-bold text-lg">i</span>
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-semibold text-foreground mb-3">
-                  Partnership Disclosure
-                </h3>
-                <div className="text-sm text-muted-foreground space-y-2 leading-relaxed">
-                  <p>
-                    <strong>Independent Operations:</strong> Bradford International Alliance (BIA) and Flowmingo AI operate independently under defined collaboration scopes. Each partner maintains separate legal and operational responsibilities.
-                  </p>
-                  <p>
-                    <strong>No Employment Guarantees:</strong> Neither Talent Boost Academy nor our partners guarantee employment outcomes, visa approvals, or hiring decisions. All employment decisions are made solely by hiring organizations.
-                  </p>
-                  <p>
-                    <strong>Scope of Collaboration:</strong> Our partnerships focus on education access (BIA) and HR technology solutions (Flowmingo). We do not jointly provide recruitment, immigration, or employment services.
-                  </p>
-                  <p>
-                    For more information, see our{" "}
-                    <Link href="/disclaimer">
-                      <span className="text-primary hover:text-gold underline">Disclaimer</span>
-                    </Link>
-                    {" "}and{" "}
-                    <Link href="/faq">
-                      <span className="text-primary hover:text-gold underline">FAQ</span>
-                    </Link>.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="mb-6">
-              Ready to Work with Us?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-10">
-              Whether you're interested in our services or exploring partnership 
-              opportunities, we'd love to hear from you.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href="/services">
-                <Button size="lg" variant="outline">
-                  Explore Services
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
