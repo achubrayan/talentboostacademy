@@ -21,13 +21,13 @@ export default function Header() {
   const [location] = useLocation();
   const { t } = useTranslation(); // Integrated: Translation function
 
-  // Navigation links are now dynamic based on the active language
+  // Navigation links - Keys now match your en.json exactly
   const navLinks = [
     { href: "/", label: t("nav.home") },
     { href: "/about", label: t("nav.about") },
     { href: "/services", label: t("nav.services") },
     { href: "/blog", label: t("nav.blog") },
-    { href: "/case-studies", label: t("nav.case_studies") },
+    { href: "/case-studies", label: t("nav.caseStudies") }, 
     { href: "/partnerships", label: t("nav.partnerships") },
     { href: "/testimonials", label: t("nav.testimonials") },
     { href: "/faq", label: t("nav.faq") },
