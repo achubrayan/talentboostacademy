@@ -34,11 +34,11 @@ export default function Partnerships() {
       id: "bia",
       name: "Bradford International Alliance",
       shortName: "BIA",
-      type: "Academic Partner",
+      type: t("partnerships.bradfordRole"),
       logo: "BIA",
       logoImage: BIA_LOGO_URL,
       url: "https://bradfordia.org/",
-      description: "Bradford International Alliance is our strategic academic partner, enabling us to deliver world-class online degree and academic programs to professionals worldwide.",
+      description: t("services_page.education_description"),
       partnership: "Through our partnership with BIA, we offer internationally recognized undergraduate and postgraduate programs designed for working professionals seeking to advance their careers through flexible, accessible education.",
       offerings: [
         "Online undergraduate degree programs",
@@ -53,11 +53,11 @@ export default function Partnerships() {
       id: "flowmingo",
       name: "Flowmingo AI",
       shortName: "Flowmingo",
-      type: "HR Technology Partner",
+      type: t("partnerships.flowmingoRole"),
       logo: "F",
       logoImage: FLOWMINGO_LOGO_URL,
       url: "https://rebrand.ly/6b9b3hy", // UPDATED: Your Referral Link
-      description: "Flowmingo AI powers our cutting-edge HR technology and AI solutions, bringing intelligent automation and advanced recruitment capabilities to our clients.",
+      description: t("services_page.tech_description"),
       partnership: "Our partnership with Flowmingo AI enables us to offer state-of-the-art AI-powered recruitment tools, candidate screening solutions, and digital HR transformation services that help organizations hire smarter and faster.",
       offerings: [
         "AI-powered recruitment tools",
@@ -215,152 +215,3 @@ export default function Partnerships() {
             </div>
             <span className="label-editorial mb-4 block">Our Partners</span>
             <h2 className="mb-6">Meet Our <span className="text-primary">Strategic Partners</span></h2>
-            <p className="text-muted-foreground">
-              Talent Boost Academy partners with leading organizations to deliver world-class solutions
-            </p>
-          </motion.div>
-
-          <div className="space-y-12">
-            {partners.map((partner, index) => (
-              <motion.div
-                key={partner.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-sm overflow-hidden"
-              >
-                <div className="grid lg:grid-cols-3 gap-0">
-                  <div className="p-8 md:p-10 lg:col-span-2">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className={`w-20 h-20 rounded-xl flex items-center justify-center ${
-                        partner.color === "gold" ? "bg-gold/20" : "bg-primary/10"
-                      }`}>
-                        <img src={partner.logoImage} alt={partner.name} className="w-full h-full object-contain p-2 rounded-xl" />
-                      </div>
-                      <div>
-                        <div className={`text-xs font-medium uppercase tracking-wider mb-1 ${
-                          partner.color === "gold" ? "text-gold" : "text-primary"
-                        }`}>
-                          {partner.type}
-                        </div>
-                        <h3 className="text-2xl font-serif font-semibold">{partner.name}</h3>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground mb-4">{partner.description}</p>
-                    <p className="text-muted-foreground mb-6">{partner.partnership}</p>
-                    <a href={partner.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
-                      Visit {partner.shortName} <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                  <div className={`p-8 md:p-10 ${partner.color === "gold" ? "bg-gradient-to-br from-gold/10 to-gold/5" : "bg-gradient-to-br from-primary/10 to-primary/5"}`}>
-                    <h4 className="font-serif font-semibold text-lg mb-4">What We Offer Together</h4>
-                    <ul className="space-y-3">
-                      {partner.offerings.map((offering, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <partner.icon className={`w-5 h-5 mt-0.5 flex-shrink-0 ${partner.color === "gold" ? "text-gold" : "text-primary"}`} />
-                          <span className="text-sm text-foreground">{offering}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-6 pt-6 border-t border-border/50">
-                      <Link href="/services">
-                        <Button variant="outline" className="w-full">
-                          View Related Services <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <PartnerMetricsDashboard />
-
-      {/* Comparison Table Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-            <span className="label-editorial mb-4 block">Partnership Synergy</span>
-            <h2 className="mb-6">How Our Partners <span className="text-primary">Complement Each Other</span></h2>
-            <p className="text-muted-foreground text-lg max-w-3xl">
-              Our partnerships create a powerful ecosystem where academic excellence meets cutting-edge technology.
-            </p>
-          </motion.div>
-          <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b bg-secondary/30">
-                    <th className="px-6 py-4 text-left font-serif font-semibold">Feature</th>
-                    <th className="px-6 py-4 text-left font-serif font-semibold text-primary">Bradford International Alliance</th>
-                    <th className="px-6 py-4 text-left font-serif font-semibold text-gold">Flowmingo AI</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonData.map((row, index) => (
-                    <tr key={index} className="border-b hover:bg-secondary/5 transition-colors">
-                      <td className="px-6 py-4 font-medium">{row.feature}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.bia}</td>
-                      <td className="px-6 py-4 text-muted-foreground">{row.flowmingo}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Inquiry Section */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gradient-purple rounded-2xl p-8 md:p-12 text-white text-center">
-              <Handshake className="w-16 h-16 text-gold mx-auto mb-6" />
-              <h2 className="text-white mb-4">Interested in Partnering with Us?</h2>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                We're always looking for strategic partners who share our vision.
-              </p>
-              <Link href="/contact">
-                <Button size="lg" className="bg-[#D4AF37] hover:bg-[#C9A227] text-[#1E1E28] font-semibold px-8 shadow-lg">
-                  Start a Conversation <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Disclosure Section */}
-      <section className="py-12 bg-gray-50 border-t border-b border-gray-200">
-        <div className="container max-w-4xl">
-          <div className="bg-white rounded-lg p-6 md:p-8 border border-gray-200">
-            <h3 className="font-serif text-lg font-semibold text-foreground mb-3">Partnership Disclosure</h3>
-            <div className="text-sm text-muted-foreground space-y-2 leading-relaxed">
-              <p><strong>Independent Operations:</strong> Bradford International Alliance (BIA) and Flowmingo AI operate independently.</p>
-              <p><strong>No Employment Guarantees:</strong> Neither Talent Boost Academy nor our partners guarantee employment outcomes.</p>
-              <p>For more information, see our <Link href="/disclaimer"><span className="text-primary hover:text-gold underline">Disclaimer</span></Link>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-            <h2 className="mb-6">Ready to Work with Us?</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact"><Button size="lg" className="bg-primary hover:bg-primary/90">Contact Us <ArrowRight className="ml-2 h-5 w-5" /></Button></Link>
-              <Link href="/services"><Button size="lg" variant="outline">Explore Services</Button></Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-  );
-}
