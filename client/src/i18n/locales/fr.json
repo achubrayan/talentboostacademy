@@ -76,8 +76,8 @@
   },
   "partnerships": {
     "label": "Nos Partenaires",
-    "title": "Alliances <span class='text-primary'>Stratégiques</span>",
-    "subtitle": "Nous collaborons avec des institutions de pointe et des partenaires technologiques comme Flowmingo AI.",
+    "title": "Partenariats Stratégiques & <span class='text-white'>Alliances Mondiales</span>",
+    "subtitle": "Nous collaborons avec des institutions de pointe et des partenaires technologiques comme Flowmingo AI pour stimuler la transformation.",
     "bradfordRole": "Partenaire Académique",
     "flowmingoRole": "Partenaire Technologie RH",
     "viewAll": "Voir tous les Partenariats"
@@ -139,10 +139,10 @@
     "analytics_description": "Insights basés sur Power BI et modélisation avancée pour optimiser votre capital humain.",
     "analytics_features": "Tableaux de bord, Analytique prédictive, Métriques de performance, Intelligence des talents",
     "education_title": "Éducation en Ligne",
-    "education_description": "Programmes académiques mondiaux accessibles pour les professionnels cherchant à progresser.",
+    "education_description": "Bradford International Alliance est notre partenaire académique stratégique, nous permettant de proposer des programmes de diplômes en ligne de classe mondiale aux professionnels du monde entier.",
     "education_features": "Diplômes, Certifications professionnelles, Cours spécialisés, Horaires flexibles",
     "tech_title": "RH Tech & IA",
-    "tech_description": "Solutions IA pour simplifier le recrutement et transformer la gestion digitale des talents.",
+    "tech_description": "Flowmingo AI propulse notre technologie RH de pointe et nos solutions d'IA, apportant une automatisation intelligente et des capacités de recrutement avancées à nos clients.",
     "tech_features": "Recrutement IA, Automatisation RH, Systèmes de gestion des talents, Transformation digitale",
     "cta_title": "Explorez nos Offres Complètes",
     "cta_description": "Discutons des services les mieux adaptés aux besoins de votre organisation.",
@@ -195,7 +195,7 @@
     "q3_title": "Quels secteurs servez-vous ?",
     "q3_answer": "Nous travaillons avec la technologie, la finance, l'industrie, l'éducation et plus encore.",
     "q4_title": "Proposez-vous des solutions BI personnalisées ?",
-    "q4_answer": "Oui, tous nos tableaux de bord et analyses sont adaptés aux défis de données spécifiques de votre entreprise.",
+    "q4_answer": "Oui, tous nos tableaux de bord et analyses sont adaptés aux défis de données des organisations modernes.",
     "q5_title": "Quelle est votre approche du conseil ?",
     "q5_answer": "Nous combinons insights basés sur les données et expertise stratégique pour des résultats mesurables.",
     "cta_title": "Encore des questions ?",
@@ -225,9 +225,9 @@
   "partnerships_page": {
     "hero_title": "Nos Partenariats",
     "hero_subtitle": "Des alliances stratégiques pour l'excellence",
-    "description": "Nous collaborons avec des institutions leaders pour fournir des solutions de classe mondiale.",
+    "description": "Nous collaborons avec des institutions de premier plan et des partenaires technologiques pour fournir des solutions de classe mondiale qui stimulent la transformation.",
     "cta_title": "Intéressé par un Partenariat ?",
-    "cta_description": "Nous recherchons toujours des partenaires partageant notre vision.",
+    "cta_description": "Nous sommes toujours à la recherche de partenaires stratégiques qui partagent notre vision de l'autonomisation des organisations et du développement des talents.",
     "cta_button": "Explorer les Opportunités"
   },
   "testimonials_page": {
