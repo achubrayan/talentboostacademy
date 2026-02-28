@@ -127,6 +127,7 @@ export default function Partnerships() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6">
@@ -140,9 +141,22 @@ export default function Partnerships() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Philosophy Section */}
       <section className="py-20 bg-background">
         <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <span className="label-editorial mb-4 block">Our Approach</span>
+            <h2 className="mb-6">Built on <span className="text-primary">Trust & Excellence</span></h2>
+            <p className="text-muted-foreground">
+              Our alliances are built on a shared mission to empower organizations through data-driven talent solutions.
+            </p>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {partnershipValues.map((v, i) => (
               <motion.div
@@ -168,7 +182,7 @@ export default function Partnerships() {
       <section className="py-20 bg-secondary/30">
         <div className="container">
           <div className="text-center mb-16">
-            <img src={LOGO_URL} alt="Logo" className="h-20 mx-auto mb-8" />
+            <img src={LOGO_URL} alt="TBA" className="h-20 mx-auto mb-8" />
             <h2 className="mb-6">Meet Our <span className="text-primary">Strategic Partners</span></h2>
           </div>
           <div className="space-y-12">
@@ -178,7 +192,7 @@ export default function Partnerships() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-sm overflow-hidden grid lg:grid-cols-3 border border-gray-100"
+                className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden grid lg:grid-cols-3"
               >
                 <div className="p-8 lg:col-span-2">
                   <div className="flex items-start gap-4 mb-6">
@@ -190,10 +204,10 @@ export default function Partnerships() {
                       <h3 className="text-2xl font-serif font-semibold">{p.name}</h3>
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-6">{p.description}</p>
+                  <p className="text-muted-foreground mb-4">{p.description}</p>
                   <p className="text-sm italic mb-6 text-muted-foreground/80">{p.partnership}</p>
                   <a href={p.url} target="_blank" rel="noreferrer" className="text-primary font-medium inline-flex items-center gap-2 hover:underline">
-                    Visit {p.shortName} <ExternalLink size={16} />
+                    Visit Site <ExternalLink size={16} />
                   </a>
                 </div>
                 <div className={`p-8 ${p.color === "gold" ? "bg-gold/5" : "bg-primary/5"}`}>
@@ -215,7 +229,7 @@ export default function Partnerships() {
 
       <PartnerMetricsDashboard />
 
-      {/* Comparison Table Section */}
+      {/* Comparison Section */}
       <section className="py-20 bg-background">
         <div className="container">
           <h2 className="mb-12 text-center">Partnership <span className="text-primary">Synergy</span></h2>
@@ -242,7 +256,7 @@ export default function Partnerships() {
         </div>
       </section>
 
-      {/* Final CTA & Disclosure */}
+      {/* CTA & Legal Disclosure */}
       <section className="py-20 bg-secondary/10">
         <div className="container max-w-4xl">
           <div className="bg-gradient-purple rounded-2xl p-10 text-white text-center mb-12">
@@ -261,8 +275,8 @@ export default function Partnerships() {
               <Shield className="w-5 h-5 text-primary" /> Partnership Disclosure
             </h3>
             <div className="text-sm text-muted-foreground space-y-3 leading-relaxed">
-              <p><strong>Independent Entities:</strong> Bradford International Alliance and Flowmingo AI are strategic partners of Talent Boost Academy. Each entity operates independently within defined collaborative scopes.</p>
-              <p><strong>Referral Relationships:</strong> This page may contain referral links. Our recommendations are based on verified technological and academic excellence.</p>
+              <p><strong>Independent Entities:</strong> Bradford International Alliance and Flowmingo AI are strategic partners. Each operates independently within defined collaborative scopes.</p>
+              <p><strong>Affiliation:</strong> We provide these links as a service to our clients. Talent Boost Academy may have referral agreements that support our continued research into talent technology.</p>
               <Link href="/disclaimer" className="text-primary font-medium hover:underline inline-flex items-center gap-1">
                 View Full Legal Disclaimer <ArrowRight size={14} />
               </Link>
